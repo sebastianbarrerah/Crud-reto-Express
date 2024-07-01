@@ -42,6 +42,7 @@ export const removeNota = async ({params}: Request, res:Response) => {
     if (!id) return res.status(404).json({Message: "No se pudo eliminar la nota"})
     try {
         const response = await deleteNotaService(id);
+        res.status(200)
         res.send(response)
     } catch (error) {
         res.status(500).json({Error: "Error al eliminar la nota"})
