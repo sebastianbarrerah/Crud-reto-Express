@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json())
 app.use(cors())
 app.listen(PORT, () => {
-    console.log(`app  corriendo por el puerto ${PORT}`)
+    console.log(`app corriendo por el puerto ${PORT}`)
 })
 db().then(() => console.log("Conexion a la base de datos")).catch((error) => console.error("Error en la conexión", error))
 app.use(getData, updateTheNota, deleteNota, postNota, registerPage, loginPage)

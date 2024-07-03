@@ -21,7 +21,7 @@ export const addNewNota = async(  req: Request, res:Response) => {
         const response = await addNotaService(id ,req.body)
         res.send(response)
     } catch (error) {
-        res.status(500).json({Error: "Error al crear usuario"})
+        res.status(500).json({Error: "Error al crear nota"})
     }
 }
 
