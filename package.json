@@ -4,7 +4,9 @@
   "description": "Back utilizando typescript en node.js",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/app.ts"
+    "dev": "nodemon src/app.ts",
+    "start": "node ./dist/app.js",
+    "build": "tsc"
   },
   "author": "Sebastián barrera",
   "license": "ISC",
