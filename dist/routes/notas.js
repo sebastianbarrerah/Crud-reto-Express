@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deleteNota = exports.updateTheNota = exports.postNota = exports.getData = void 0;
+const express_1 = require("express");
+const notas_1 = require("../controllers/notas");
+const router = (0, express_1.Router)();
+exports.getData = router.get("/notas/:id", notas_1.getNotas);
+exports.postNota = router.post("/agregar/:id", notas_1.addNewNota);
+exports.updateTheNota = router.patch("/actualizar/:id", notas_1.updateNota);
+exports.deleteNota = router.delete("/borrar/:id", notas_1.removeNota);
